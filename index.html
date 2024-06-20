@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PTMSPoc Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container-logo">
+            <div class="logo">
+                <img src="logo.jpeg" alt="PTMSPoc Logo">
+                <div class="logo-text">LUCKNOW NAGAR NIGAM</div>
+                <img src="logo2.png">
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Welcome to the Nagar Nigam Portal</h1>
+            <p>Your property details provider</p>
+            <form class="search-box">
+                <select name="zone" id="zone">
+                    <option value="">Select Zone</option>
+                    <!-- Add options here -->
+                </select>
+                <select name="ward" id="ward">
+                    <option value="">Select Ward</option>
+                    <!-- Add options here -->
+                </select>
+                <select name="mohalla" id="mohalla">
+                    <option value="">Select Mohalla</option>
+                    <!-- Add options here -->
+                </select>
+                <input type="text" name="unique-property-id" placeholder="Enter unique property ID">
+                <input type="text" name="mobile-no" placeholder="Enter your mobile number">
+                <input type="text" name="existing-property-id" placeholder="Enter existing property ID">
+                <input type="text" name="owner-name" placeholder="Enter owner name">
+                <input type="text" name="house-number" placeholder="Enter house number">
+                <button type="submit">Search</button>
+            </form>
+            <div id="map" class="map-container"></div>
+        </div>
+    </section>
+
+    <script>
+        // Initialize the map
+        var map = L.map('map').setView([26.8467, 80.9462], 13);
+
+        // Add a tile layer to the map
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+    </script>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Nagar Nigam. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
