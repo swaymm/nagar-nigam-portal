@@ -1,0 +1,201 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f2f2f2;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Header styles */
+header {
+    background-color: black;
+    color: #fff;
+    padding: 10px 0;
+    border-bottom: 4px solid #1c1c1c;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.logo img {
+    height: 100px;
+    width: auto;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.logo-text {
+    font-size: 2rem;
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* Hero section styles */
+.hero {
+    background-image: url(back.jpg);
+    color: #333;
+    padding: 80px 0;
+    text-align: center;
+    position: relative;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.search-box {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.search-box select,
+.search-box input {
+    padding: 10px;
+    font-size: 1em;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    flex: 1 1 200px; /* Flex item properties */
+}
+
+.search-box button {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.search-box button:hover {
+    background-color: #555;
+}
+
+/* Other section styles */
+.about,
+.services,
+.portfolio,
+.contact {
+    padding: 50px 0;
+    text-align: center;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+.map-container {
+    margin-top: 20px;
+    height: 450px; /* Adjust height as needed */
+    width: 100%;
+}
+
+.map-container iframe {
+    width: 100%;
+    max-width: 800px;
+    height: 450px;
+    border: 0;
+}
+@media (max-width: 1200px) {
+    .container {
+        width: 90%;
+    }
+
+    .logo img {
+        height: 80px;
+    }
+
+    .logo-text {
+        font-size: 1.5rem;
+    }
+
+    .hero h1 {
+        font-size: 2.5em;
+    }
+
+    .hero p {
+        font-size: 1.3em;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .logo img {
+        height: 60px;
+        margin-bottom: 10px;
+    }
+
+    .logo-text {
+        font-size: 1.3rem;
+    }
+
+    .hero {
+        padding: 40px 0;
+    }
+
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .search-box {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .search-box select,
+    .search-box input,
+    .search-box button {
+        flex: 1 1 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo img {
+        height: 50px;
+    }
+
+    .logo-text {
+        font-size: 1rem;
+    }
+
+    .hero h1 {
+        font-size: 1.5em;
+    }
+
+    .hero p {
+        font-size: 0.9em;
+    }
+}
